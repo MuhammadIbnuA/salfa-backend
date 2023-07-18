@@ -21,19 +21,19 @@ app.post("/register", userController.registerUser);
 app.post("/login", userController.login);
 
 // Create a new menu
-app.post("/", menuController.createMenu);
+app.post("/data", menuController.createMenu);
 
 // Get a menu by ID
-app.get("/:id", menuController.getMenuById);
+app.get("/data/:id", menuController.getMenuById);
 
 // Get all menus
-app.get("/", isAuthenticated, menuController.getAllMenus);
+app.get("/data", isAuthenticated, menuController.getAllMenus);
 
 // Update a menu by ID
-app.put("/:id", menuController.updateMenu);
+app.put("/data/:id", menuController.updateMenu);
 
 // Delete a menu by ID
-app.delete("/:id", menuController.deleteMenu);
+app.delete("/data/:id", menuController.deleteMenu);
 
 
 mongoose
